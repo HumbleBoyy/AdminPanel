@@ -11,3 +11,7 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.redBg{
+    background-color: red!important; 
+}
