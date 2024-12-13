@@ -16,9 +16,18 @@
           }
         }
     </script>
-    <title>Register</title>
+    <title>Login</title>
 </head>
-<body>
-    
+<body class="lognBg flex items-center justify-center">
+    <div class="w-[600px] h-[400px] bg-white pt-[35px] pb-[48px] rounded-md flex flex-col items-center">
+         <img class="mb-[17px]" src="./images/logo.svg" alt="Logo" width="421" height="72">
+         <p class="text-[#A3A3A3] font-bold text-[25px] mb-[40px] leading-[29.03px] text-center">Введите имя пользователя и пароль, чтобы получить доступ к системе.</p>
+          
+         <form class="flex flex-col justify-center items-center gap-2">
+            <input required name="username" class="outline-none text-center py-[15px] shadow shadow-[#CBCBCB] border-[1px] border-[#CBCBCB] rounded-2xl w-[359px] placeholder:font-bold  placeholder:text-[25px] text-[25px] font-bold text-[#A3A3A3]" type="text" placeholder="Имя пользователя">
+            <input required name="password" class="outline-none text-center py-[15px] shadow shadow-[#CBCBCB] border-[1px] border-[#CBCBCB] rounded-2xl w-[359px] placeholder:font-bold  placeholder:text-[25px] text-[25px] font-bold text-[#A3A3A3]" type="password" placeholder="Пароль">
+            <button class="w-[237px] h-[47px] rounded-xl text-white font-bold bg-[#3F8C8E]">Войти</button>
+         </form>
+    </div>
 </body>
 </html>
