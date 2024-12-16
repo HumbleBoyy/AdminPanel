@@ -13,6 +13,7 @@ elLoginForm.addEventListener("submit", (e)=> {
     if(data.username === "Asadulloh" && data.password === "1234"){
         setTimeout(()=> {
             elLoginBtn.innerHTML = `Войти`
+            localStorage.setItem("user", JSON.stringify(data))
             location.pathname = "./products.html"
         },1000)
     }else{

@@ -1,20 +1,6 @@
-let elToggleBtn = document.querySelector(".toggleBtn")
+let userName = document.querySelector(".username")
+let elCategory1 = document.querySelector(".category1")
+let elCategory2 = document.querySelector(".category2")
 
-elToggleBtn.addEventListener("click", ()=> {
-
-    document.body.classList.toggle('darkMode')
-
-    if(document.body.classList.contains('darkMode')){
-        localStorage.setItem('theme', 'dark')
-    }else{
-        localStorage.setItem('theme', 'light')
-    }
-})
-
-window.addEventListener('load', ()=> {
-    const savedTheme = localStorage.getItem('theme')
-
-    if(savedTheme === 'dark'){
-        document.body.classList.add('darkMode')
-    }
-})
+const user = JSON.parse(localStorage.getItem("user"))
+userName.textContent = user.username
