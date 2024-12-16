@@ -15,3 +15,10 @@
 .redBg{
     background-color: red!important; 
 }
+
+
+
+.darkMode {
+    background-color: white !important;
+    color: black !important;
+}

@@ -10,7 +10,7 @@ elLoginForm.addEventListener("submit", (e)=> {
         password: e.target.password.value
     }
     elLoginBtn.innerHTML = `<img class="scale-[1.2]" src="./images/loader.png" alt="loader" width="50" height="50">`
-    if(data.username === "Asadulloh" && data.password === "123"){
+    if(data.username === "Asadulloh" && data.password === "1234"){
         setTimeout(()=> {
             elLoginBtn.innerHTML = `Войти`
             location.pathname = "./products.html"
