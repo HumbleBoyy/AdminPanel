@@ -277,13 +277,13 @@ function handleEditBtn(id){
         
         
 
-         // if(data.category_id === "0"){
-         //       elCategory1.className = "category1 text-[35px] text-[#009398] font-bold border-b-[3px] border-[#009398]"
-         //       elCategory2.className = "category2 text-[35px] text-[#A6A6A6] font-bold border-b-[3px] border-transparent"
-         // }else{
-         //       elCategory2.className = "category1 text-[35px] text-[#009398] font-bold border-b-[3px] border-[#009398]"
-         //       elCategory1.className = "category2 text-[35px] text-[#A6A6A6] font-bold border-b-[3px] border-transparent"
-         // }
+         if(editProduct.category_id === "0"){
+               elCategory1.className = "category1 text-[35px] text-[#009398] font-bold border-b-[3px] border-[#009398]"
+               elCategory2.className = "category2 text-[35px] text-[#A6A6A6] font-bold border-b-[3px] border-transparent"
+         }else{
+               elCategory2.className = "category1 text-[35px] text-[#009398] font-bold border-b-[3px] border-[#009398]"
+               elCategory1.className = "category2 text-[35px] text-[#A6A6A6] font-bold border-b-[3px] border-transparent"
+         }
       },1000)
    })
 
