@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+    </script>
+    <title>UI</title>
+</head>
+<body>
+    <section class="frame_section h-[100vh] w-full">
+        <div class="flex justify-center items-center bg-[#009398] w-full h-[100px]">
+            <h2 class="text-[50px] leading-[58px] font-bold text-white">Каркасные бассейны</h2>
+        </div>
+
+        <ul class="uIproducts flex justify-between items-center p-10"></ul>
+    </section>
+
+    <section class="inFlatable_section h-[100vh] w-full">
+      <div class="flex justify-center items-center bg-[#009398] w-full h-[100px]">
+          <h2 class="text-[50px] leading-[58px] font-bold text-white">Надувные бассейны</h2>
+      </div>
+
+      <ul class="uIproducts2 flex justify-between items-center p-10"></ul>
+  </section>
+
+  <div id="wrapper"  class="modalWrapper scale-0 fixed  inset-0 bg-[#00000069] backdrop-blur flex py-10 items-center justify-center">
+    <div class="innerModalWrapper absolute w-[1000px] bg-white p-[40px] rounded-xl">
+        
+    </div>
+</div>
+
+    <script src="./js/ui.js"></script>
+</body>
+</html>

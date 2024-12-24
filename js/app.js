@@ -1,14 +1,13 @@
 let userName = document.querySelector(".username")
 const user = JSON.parse(localStorage.getItem("user"))
-userName.textContent = user.username
-
-
+userName.innerHTML = user.username
 
 let elCategory1 = document.querySelector(".category1")
 let elCategory2 = document.querySelector(".category2")
 let elModalWrapper = document.querySelector(".modalWrapper")
 let elModalInnerWrapper = document.querySelector(".innerModalWrapper")
 let elTbodyProducts = document.querySelector(".products_wrapper")
+
 
 let productList = JSON.parse(localStorage.getItem("products")) || []
 
@@ -67,7 +66,7 @@ function handleAddClickBtn(){
          <div class="w-[49%]">
            <label>
            <span class="text-[15px] mb-[9px] text-[#898989] leading="32px" ">Статус</span>
-              <select required name="recommendation" class="w-full p-[12px] rounded-[5px] bg-slate-100 shadow-xl text-[25px] text-[#545454] outline-none">
+              <select required name="status" class="w-full p-[12px] rounded-[5px] bg-slate-100 shadow-xl text-[25px] text-[#545454] outline-none">
                 <option value="0">Рекомендуем</option>
                 <option value="1">Cкидка</option>
                 <option value="2">Нет в наличии</option>
@@ -112,7 +111,7 @@ function handleAddClickBtn(){
          image:  eladd_Image.src,
          frame: event.target.frame.value,
          size: event.target.size.value,
-         status: event.target.recommendation.value,
+         status: event.target.status.value,
          quantity: event.target.quantity.value,
          discount_price: event.target.discount_price.value,
          depth:event.target.depth.value
@@ -224,10 +223,10 @@ function handleEditBtn(id){
        <div class="w-[49%]">
          <label>
          <span class="text-[15px] mb-[9px] text-[#898989] leading="32px" ">Статус</span>
-            <select  name="recommendation" class="w-full p-[12px] rounded-[5px] bg-slate-100 shadow-xl text-[25px] text-[#545454] outline-none">
-              <option ${editProduct.recommendation === "0" && "selected"} value="0">Рекомендуем</option>
-              <option ${editProduct.recommendation === "1" && "selected"} value="1">Cкидка</option>
-              <option ${editProduct.recommendation === "2" && "selected"} value="2">Нет в наличии</option>
+            <select  name="status" class="w-full p-[12px] rounded-[5px] bg-slate-100 shadow-xl text-[25px] text-[#545454] outline-none">
+              <option ${editProduct.status === "0" && "selected"} value="0">Рекомендуем</option>
+              <option ${editProduct.status === "1" && "selected"} value="1">Cкидка</option>
+              <option ${editProduct.status === "2" && "selected"} value="2">Нет в наличии</option>
            </select>
          </label>
          <label>
@@ -264,7 +263,7 @@ function handleEditBtn(id){
       editProduct.price = event.target.price.value
       editProduct.frame = event.target.frame.value
       editProduct.size = event.target.size.value
-      editProduct.recommendation = event.target.recommendation.value
+      editProduct.status = event.target.status.value
       editProduct.quantity = event.target.quantity.value
       editProduct.discount_price = event.target.discount_price.value
       editProduct.depth = event.target.depth.value
@@ -296,3 +295,4 @@ function handleEditBtn(id){
    })
 }
 // Edit Button end
+
